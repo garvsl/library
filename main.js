@@ -23,7 +23,9 @@ function bookLoop(){
         let div = document.createElement('div');
         div.className = 'book'
         bod.appendChild(div);
-        // make two more and make them the design ones
+
 
     });
 }
+
+/* make a div with class bookinner and append h3 with class title, h4 with class author, and another h4 with pages, for the status idk */
