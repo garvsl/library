@@ -33,12 +33,21 @@ form{
     border-radius: 25px;
     padding:30px;
     
-    /* visibility: hidden; */
+    visibility: hidden;
     transition:.3s ease-in-out;
-    /* scale: 0; */
+    scale: 0;
     width:500px;
     background-color: white;
     
+}
+
+
+
+
+input::placeholder{
+    color:rgba(128, 128, 128, 0.466);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size:1rem;
 }
 
 form svg{
@@ -267,10 +276,94 @@ label{
     margin-bottom:10px;
 } 
 
-.book:hover, .book:hover:after, .book:hover:before, .bookinner:hover{
+/* .book:hover, .book:hover:after, .book:hover:before, .bookinner:hover{
     opacity:0.8;
-    cursor:pointer;
+
+} */
+
+
+
+
+
+.noread{
+    bottom:12px;
+    right:18px;
+    width:24px;
+    height:24px;
+    cursor: pointer;
+    color:red;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.read{
+    bottom:12px;
+    right:18px;
+    width:24px;
+    height:24px;
+    cursor: pointer;
+    color:green;
+    position: absolute;
+    transition: 0.4s ease-in-out;
 }
 
 
+.hovered{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size:2rem;
+    color:white;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    width:100%;
+    height:100%;
+    background-color: #262626;
+    transition: 1s ease-in-out;
+    position: absolute;
+    gap:10px;
+}
 
+.inside{
+
+    display:flex;
+    flex-direction:row;
+
+    gap:30px;
+}
+
+.yes, .no{
+    border-radius: 25px;
+    padding:10px;
+    width:50px;
+    user-select: none;
+    cursor: pointer;
+    transition:0.3s ease;
+}
+
+.yes:hover, .no:hover {
+    opacity:0.6;
+    
+}
+
+.yes{
+    background-color:#42a735;
+}
+
+.no{
+    background-color: brown;
+}
+
+.removed{
+    position: absolute;
+    bottom:10px;
+    right:50px;
+    width:24px;
+    height:24px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.removed:hover{
+    color:red;
+}
