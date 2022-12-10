@@ -307,6 +307,9 @@ label{
     transition: 0.4s ease-in-out;
 }
 
+.read:hover, .noread:hover {
+    opacity:0.7
+}
 
 .hovered{
     display:flex;
