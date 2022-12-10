@@ -27,20 +27,23 @@ form{
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     top:18%;
     border-radius: 25px;
     padding:30px;
     
     visibility: hidden;
     transition:.3s ease-in-out;
-    scale: 0;
+    transform: scale(0, 0);
     width:500px;
     background-color: white;
     
 }
 
+.formcontainer{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
 
 
 
@@ -110,6 +113,7 @@ form p{
 
 label{
     border-radius: 50%;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -369,4 +373,25 @@ label{
 
 .removed:hover{
     color:red;
+}
+
+@media screen and (max-width: 650px) {
+    form{
+        width: 300px;
+    }
+
+    .questionbox input{
+        right:10px;
+        width:150px;
+    }
+
+    label{
+        font-size:0.8rem;
+        position:relative;
+        left:50px;
+    }
+
+    .check label{
+        left:0;
+    }
 }

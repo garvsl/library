@@ -32,8 +32,6 @@ function addBookToLibrary(title, author, pages, status){
 }
 
 addBookToLibrary('Example Title', 'Garv Doe', 192, true)
-addBookToLibrary('Example Title', 'Garv Doe', 192, true)
-addBookToLibrary('Example Title', 'Garv Doe', 192, false)
 
 function bookLoop(){
     library.forEach(element => {
@@ -162,15 +160,23 @@ button.addEventListener('mousedown', ()=>{
 
 button.addEventListener('mouseup', () => {
     button.style.backgroundColor = 'white';
-    form.style.visibility = 'visible';
-    form.style.scale = 1
+    if(form.style.visibility == 'visible'){
+        form.style.transform = 'scale(0, 0)'
+        form.style.visibility = 'hidden';
+    }else if(form.style.visibility == '' || form.style.visibility == 'hidden'){
+        form.style.visibility = 'visible';
+        form.style.transform = 'scale(1, 1)'
+    }
+
+
+
 })
 
 
 
 
 exit.addEventListener('mouseup', () => {
-    form.style.scale = 0
+    form.style.transform = 'scale(0, 0)'
     form.style.visibility = 'hidden';
     
 })
@@ -188,3 +194,4 @@ add.addEventListener('click', (event) => {
 
 
 
+//Add a library log to tally the amount of books read etc
