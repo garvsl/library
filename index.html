@@ -6,27 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="main.js" defer></script>
     <div class="container">
+        <form action="">
+            <h1>Add a book</h1>
+                <svg class='exit' style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
+                </svg>
+            <p class="questionbox">
+                <label for="title">What is the title? </label>
+                <input type="text" name="title" id="title">
+            </p>
+
+            <p class="questionbox">
+                <label for="author">Who is the author? </label>
+                <input type="text" name="author" id="author">
+            </p>
+
+            <p class="questionbox">
+                <label for="pages">How many pages? </label>
+                <input type="text" name="pages" id="pages">
+            </p>
+
+            <p class="check">
+                <label for="status">Have you read it? </label>
+                <input type="checkbox" name="status" id="status">
+            </p>
+            <button class='add' type="reset">Add</button>
+        </form>
         <div class="header">
             <h1>Library</h1>
-            <button>
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+            <button class="addbook">
+                <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" />
                 </svg>
             </button>
         </div>
         <div class="body">
 
-            <div class="book">
-                <div class="bookinner">
-                    <h3>Title</h3>
-                    <h4>Author</h4>
-                    <h5>152</h5>
-                </div>
             </div>
         </div>
 

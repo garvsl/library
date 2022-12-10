@@ -6,15 +6,101 @@
 @font-face {
     font-family: 'journalregular';
     src: url('../../fonts/journal-webfont.woff2') format('woff2'),
-         url('../../fonts/journal-webfont.woff') format('woff');
+    url('../../fonts/journal-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+
 body{
     position:relative;
     z-index: -4;
+}
+
+form{
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:18%;
+    border-radius: 25px;
+    padding:30px;
+    
+    /* visibility: hidden; */
+    transition:.3s ease-in-out;
+    /* scale: 0; */
+    width:500px;
+    background-color: white;
+    
+}
+
+form svg{
+    position: absolute;
+    right:15px;
+    top:10px;
+    color:brown;
+}
+
+form h1{
+    font-family: 'Roboto', sans-serif;  
+}
+
+form button{
+    width:100px;
+    height:35px;
+    background-color: #42a735;;
+    border:none;
+    border-radius: 25px;;
+    transition: 0.3s ease-in-out;
+    color:white;
+}
+
+form button:hover{
+    background-color: #42a73549;
+    color:black
+}
+form p{
+    display:flex;
+    gap:15px;
+    justify-content: flex-start;
+    align-items: center;
+    width:375px;
+
+}
+
+.questionbox input{
+    width:190px;
+    height:15px;
+    display:flex;
+    border-radius: 25px;
+    border:1px solid black;
+    position:absolute;
+    right:70px  ;
+    padding:5px;
+}
+
+.check {
+    display:flex;
+    justify-content: center;
+}
+
+.exit{
+    transition:0.3s ease-in-out;
+}
+
+.exit:hover{
+    color:black;
+}
+
+label{
+    border-radius: 50%;
 }
 
 .container{
@@ -29,12 +115,43 @@ body{
 
 .header{
     grid-row: 1/1;
+
     grid-column: 1/1;
+    background-color: #262626;
 
     
     display:flex;
+    color:white;
     justify-content: center;
+    gap:15px;
     align-items: center;
+
+}
+
+@keyframes colorchange {
+    50% {background-color:black;}
+    
+}
+
+.header button{
+    width:50px;
+    height:50px;
+    outline:none;
+    animation-name: 'colorchange';
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    border: none;
+    border-radius: 25px;
+    margin-top:30px;
+    color:rgb(41, 35, 35);
+    transition:0.4s ease-in-out;
+    
+}
+
+.header button:hover{
+
+    color: #42a735;
+
 }
 
 .header h1{
@@ -44,13 +161,12 @@ body{
 }
 
 .body{
-
-    border:10px solid rgb(226, 152, 56);
+    border:10px solid white;
     position:relative;
     z-index: -2;
     padding:20px;
     padding-left:30px;
-    background-color: rgba(222, 184, 135, 0.562);
+    background-color: #C2CAD0;
     grid-row: 2/2;
 
     display:grid;   
@@ -74,7 +190,6 @@ body{
 
 
 .book::after{
-    position: absolute;
     height:100%;
     width:4%;
     right:-12px;
@@ -82,9 +197,10 @@ body{
     z-index: -1;
     content: '';
     background-color: white;
-    box-shadow:10px 5px 20px rgba(0, 0, 0, 0.377);
+    box-shadow:10px 5px 20px rgba(0, 0, 0, 0.514);
     transform: rotateY(40deg); 
     border-right:1px solid rgba(0, 0, 0, 0.171);
+    position: absolute;
 
 }
 
@@ -103,10 +219,55 @@ body{
 }
 
 .bookinner{
+    position:absolute;
+    text-overflow: clip;
+    font-size:1.5rem;
+
+    width:100%;
+    height:100%;
+    transition:0.3s ease-in-out;
+    word-wrap: break-word;
 
 }
 
-.book:hover, .book:hover:after, .book:hover:before, .bookinner{
+.textwrap{
+    padding:5px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    flex-wrap:wrap;
+    width:100%;
+    transition:0.3s ease-in-out;
+    height:100%;
+}
+
+
+.bookinner h3{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-weight:800;
+    
+    
+}
+
+.bookinner h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    font-size:1rem;
+    color:white;
+    
+}
+
+.bookinner h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    font-size:1rem;
+    color:rgba(255, 255, 255, 0.534);
+    margin-top:auto;
+    margin-bottom:10px;
+} 
+
+.book:hover, .book:hover:after, .book:hover:before, .bookinner:hover{
     opacity:0.8;
     cursor:pointer;
 }
